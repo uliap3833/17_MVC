@@ -1,0 +1,24 @@
+﻿<Window x:Class="Калькулятор.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Калькулятор"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock>Выбирите арифметическую операцию</TextBlock>
+            <ComboBox x:Name="CBOperation" SelectionChanged="CBOperation_SelectionChanged"></ComboBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox Width="50" Name="TBOXFirstNumber"/>
+                <TextBlock Width="10" Text="+" Margin="10,0,10,0" Name="TBLOCKSign"/>
+                <TextBox Width="50" Name="TBOXSecondNumber"/>
+            </StackPanel>
+            <Button Name="BCalculate"  Click="BCalculate_Click">Вычислить</Button>
+            <GroupBox Header="Результат">
+                <TextBlock x:Name="TBLOCKRez"></TextBlock>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
